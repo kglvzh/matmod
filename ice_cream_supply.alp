@@ -153,7 +153,7 @@
 				<ActionChartElement Class="ForLoop">
 					<Id>1764240810566</Id>
 					<Name><![CDATA[forLoop2]]></Name>
-					<X>780</X><Y>700</Y>
+					<X>780</X><Y>780</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -168,7 +168,7 @@
 				<ActionChartElement Class="Code">
 					<Id>1764240828817</Id>
 					<Name><![CDATA[code5]]></Name>
-					<X>780</X><Y>800</Y>
+					<X>780</X><Y>880</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -182,7 +182,7 @@ t=truckOfstorages.get(i);]]></Code>
 				<ActionChartElement Class="LocalVariable">
 					<Id>1764240820156</Id>
 					<Name><![CDATA[t]]></Name>
-					<X>780</X><Y>750</Y>
+					<X>780</X><Y>830</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -195,7 +195,7 @@ t=truckOfstorages.get(i);]]></Code>
 				<ActionChartElement Class="Return">
 					<Id>1764229888545</Id>
 					<Name><![CDATA[returnStatement]]></Name>
-					<X>780</X><Y>930</Y>
+					<X>780</X><Y>1010</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -219,13 +219,25 @@ t=truckOfstorages.get(i);]]></Code>
 					</Properties>
 				</ActionChartElement>
 				<ActionChartElement Class="Code">
+					<Id>1765440549537</Id>
+					<Name><![CDATA[code6]]></Name>
+					<X>780</X><Y>680</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="320" Height="60" Previous="1764231292793" >
+						<FillColor>-2949216</FillColor>
+						<Code><![CDATA[shops.get(i).owner=storages.get(0);]]></Code>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="Code">
 					<Id>1764231292793</Id>
 					<Name><![CDATA[code4]]></Name>
 					<X>780</X><Y>620</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="100" Height="40" Previous="1764231289204" >
+					<Properties Width="100" Height="40" Previous="1764231289204" Next="1765440549537" >
 						<FillColor>-2949216</FillColor>
 						<Code><![CDATA[x += 200;]]></Code>
 					</Properties>	
@@ -426,7 +438,7 @@ y -= 100;]]></Code>
 					<InEnvironment>true</InEnvironment>
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[10]]></Code>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 					</InitialSpeedCode>
 					<InitialLocationType>XYZ</InitialLocationType>
 					<ColumnCode Class="CodeValue">
@@ -579,9 +591,6 @@ y -= 100;]]></Code>
 						<Parameter>
 							<Name><![CDATA[amountBox]]></Name>
 						</Parameter>
-						<Parameter>
-							<Name><![CDATA[owner]]></Name>
-						</Parameter>
 					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
@@ -642,7 +651,7 @@ y -= 100;]]></Code>
 					<InEnvironment>true</InEnvironment>
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[10]]></Code>
-						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+						<Unit Class="SpeedUnits"><![CDATA[MPS]]></Unit>
 					</InitialSpeedCode>
 					<InitialLocationType>XYZ</InitialLocationType>
 					<ColumnCode Class="CodeValue">
@@ -878,12 +887,9 @@ y -= 100;]]></Code>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[int]]></Type>
+						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
-						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</DefaultValue>
 						<ParameterEditor>
 							<Id>1763023262290</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
@@ -1816,7 +1822,7 @@ moveTo(main.plant.getX(),main.plant.getY());]]></Action>
 			<ActionChartElements>
 				<ActionChartElement Class="ActionChart">
 					<Id>1764241659649</Id>
-					<Name><![CDATA[findFreeTruck]]></Name>
+					<Name><![CDATA[findFreeTruck_]]></Name>
 					<X>472</X><Y>100</Y>
 					<Label><X>-30</X><Y>-10</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1835,7 +1841,7 @@ moveTo(main.plant.getX(),main.plant.getY());]]></Action>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties CollectionIterator="false" Width="420" Height="30" Previous="1764241659649" Next="1764241659655" BodyAction="1764241659651" >
+					<Properties CollectionIterator="false" Width="420" Height="30" Previous="1764241659649" Next="1764241659655" BodyAction="1765443087878" >
 						<FillColor>-2949216</FillColor>
 
 						<Initializer><![CDATA[int i = 0]]></Initializer>
@@ -1843,40 +1849,41 @@ moveTo(main.plant.getX(),main.plant.getY());]]></Action>
 						<Counting><![CDATA[i++]]></Counting>
 					</Properties>
 				</ActionChartElement>
-				<ActionChartElement Class="LocalVariable">
-					<Id>1764241659651</Id>
-					<Name><![CDATA[t]]></Name>
-					<X>472</X><Y>200</Y>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties Width="40" Height="30" Constant="false" Previous="1764241659650" Next="1764241659653" >
-						<FillColor>-2949216</FillColor>
-						<Type><![CDATA[truckOfstorage]]></Type>
-					</Properties>	
-				</ActionChartElement>
 				<ActionChartElement Class="Decision">
-					<Id>1764241659653</Id>
+					<Id>1765443105511</Id>
 					<Name><![CDATA[decision]]></Name>
 					<X>472</X><Y>250</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="320" Height="40" Appearance="0" Previous="1764241659651" TrueAction="1764241659654" >
+					<Properties Width="584" Height="40" Appearance="0" Previous="1765443087878" TrueAction="1765443117292" >
 						<FillColor>-2949216</FillColor>
-						<Condition><![CDATA[t.inState(t.atstorage)]]></Condition>
+						<Condition><![CDATA[t.owner == this && t.inState(t.atstorage)]]></Condition>
 					</Properties>
 				</ActionChartElement>
 				<ActionChartElement Class="Return">
-					<Id>1764241659654</Id>
+					<Id>1765443117292</Id>
 					<Name><![CDATA[returnStatement2]]></Name>
-					<X>652</X><Y>300</Y>
+					<X>784</X><Y>300</Y>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Properties Width="80" Height="20" Previous="1764241659653" >
+					<Properties Width="80" Height="20" Previous="1765443105511" >
 						<FillColor>-2949216</FillColor>
 						<Return><![CDATA[t]]></Return>
+					</Properties>	
+				</ActionChartElement>
+				<ActionChartElement Class="LocalVariable">
+					<Id>1765443087878</Id>
+					<Name><![CDATA[t]]></Name>
+					<X>472</X><Y>200</Y>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties Width="40" Height="30" Constant="false" Previous="1764241659650" Next="1765443105511" >
+						<FillColor>-2949216</FillColor>
+						<Type><![CDATA[truckOfstorage]]></Type>
+						<InitialValue><![CDATA[main.truckOfstorages.get(i);]]></InitialValue>
 					</Properties>	
 				</ActionChartElement>
 				<ActionChartElement Class="Return">
@@ -1945,6 +1952,7 @@ moveTo(main.plant.getX(),main.plant.getY());]]></Action>
 {
 order order = new order(amount, this, null);
 truckOfplant t = main.plant.findFreeTruck();
+if (t != null)
 {
 	t.order = order;
 	send(order, t);
@@ -1952,6 +1960,26 @@ truckOfplant t = main.plant.findFreeTruck();
 
 }
 }]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[truckOfstorage]]></ReturnType>
+					<Id>1765443329116</Id>
+					<Name><![CDATA[findFreeTruck]]></Name>
+					<X>140</X><Y>300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[for(int i=0; i<main.truckOfstorages.size();i++)
+{
+	truckOfstorage t = main.truckOfstorages.get(i);
+	if(t.owner == this && t.inState(t.atstorage))
+	{
+		return t;
+	}
+}
+return null;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -2152,6 +2180,18 @@ truckOfplant t = main.plant.findFreeTruck();
 			<CurrentLevel>1764229651777</CurrentLevel>
 			<ConnectionsId>1764229651772</ConnectionsId>
 			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1765440860620</Id>
+					<Name><![CDATA[owner]]></Name>
+					<X>140</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[storages]]></Type>        
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1764241796785</Id>
 					<Name><![CDATA[amountBox]]></Name>
@@ -2169,27 +2209,6 @@ truckOfplant t = main.plant.findFreeTruck();
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1764241796783</Id>
-							<EditorContolType>TEXT_BOX</EditorContolType>
-							<MinSliderValue><![CDATA[0]]></MinSliderValue>
-							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
-							<DelimeterType>NO_DELIMETER</DelimeterType>
-						</ParameterEditor>
-					</Properties>                 
-				</Variable>
-				<Variable Class="Parameter">
-					<Id>1764242747109</Id>
-					<Name><![CDATA[owner]]></Name>
-					<X>40</X><Y>180</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-						<Type><![CDATA[storages]]></Type>
-						<UnitType><![CDATA[NONE]]></UnitType>
-						<SdArray>false</SdArray>
-						<ParameterEditor>
-							<Id>1764242747107</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -2291,8 +2310,8 @@ if(t != null)
 	send(order, t);
 	this.amountBox += amount;
 	s.amountOfbox -= amount;
-
 }
+
 }]]></Body>
 				</Function>
 			</Functions>
@@ -2629,7 +2648,7 @@ if(t != null)
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1764240700091" Target="1764240700089" Trigger="arrival">
 						<Action><![CDATA[order = null;
-moveTo(main.plant.getX(),main.plant.getY());]]></Action>
+moveTo(owner.getX(),owner.getY());]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
