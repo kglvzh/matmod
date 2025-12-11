@@ -2616,7 +2616,7 @@ if(t != null)
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1764240700087" Target="1764240700091" Trigger="message">
-						<Action><![CDATA[moveTo(msg.storage.getX(), msg.storage.getY());]]></Action>
+						<Action><![CDATA[moveTo(msg.shop.getX(), msg.shop.getY());]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
